@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:title="@string/general_functions">
+        <menu>
+            <item
+                android:title="@string/arithmetic"
+                android:icon="@android:drawable/ic_menu_send"/>
+        </menu>
+    </item>
+    <item android:title="@string/probability">
+        <menu>
+            <item android:title="@string/combination"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/permutation"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/binomial_probability"
+                android:icon="@android:drawable/ic_menu_send" />
+            <item
+                android:title="@string/geometric_probability"
+                android:icon="@android:drawable/ic_menu_send" />
+            <item
+                android:title="@string/std_deviation"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/z_score"
+                android:icon="@android:drawable/ic_menu_send" />
+            <item
+                android:title="@string/confidence_interval"
+                android:icon="@android:drawable/ic_menu_send"/>
+
+        </menu>
+    </item>
+    <item android:title="@string/shapes">
+        <menu>
+            <item
+                android:title="(Coming Soon)"
+                android:icon="@android:drawable/ic_menu_send"/>
+
+        </menu>
+    </item>
+
+    <item android:title="@string/trig">
+        <menu>
+            <item
+                android:title="@string/sine_cosine_tangent"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/arc_sine_cosine_tangent"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/degrees_radians"
+                android:icon="@android:drawable/ic_menu_send"/>
+
+        </menu>
+    </item>
+
+    <item android:title="@string/newton_stuff">
+        <menu>
+            <item
+                android:title="@string/net_force"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/gravitation_force"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/mass_of_object"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/distance_between_objects"
+                android:icon="@android:drawable/ic_menu_send"/>
+
+        </menu>
+    </item>
+    <item android:title="@string/other_formulas">
+        <menu>
+            <item
+                android:title="@string/quadratic_formula"
+                android:icon="@android:drawable/ic_menu_send"/>
+
+        </menu>
+    </item>
+</menu>

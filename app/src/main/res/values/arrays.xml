@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="arithmetic_options">
+        <item>+</item>
+        <item>-</item>
+        <item>x</item>
+        <item>/</item>
+    </array>
+    <array name="angle_options">
+        <item>Sine</item>
+        <item>Cosine</item>
+        <item>Tangent</item>
+    </array>
+    <array name="arc_angle_options">
+        <item>ArcSine</item>
+        <item>ArcCosine</item>
+        <item>ArcTangent</item>
+    </array>
+    <array name="angle_conversion">
+        <item>to Degrees</item>
+        <item>to Radians</item>
+
+    </array>
+</resources>

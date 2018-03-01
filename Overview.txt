@@ -1,0 +1,31 @@
+-Normal Math
+	x-Two numbers & one operation (+ - * /)
+-Probability
+	x-Combination
+	x-Permutation
+	x-Binomial Probability
+	x-Geometric Probability
+	x-Standard deviation of a Sampling Distro.
+	x-Z-Score
+	x-Confidence Interval
+-Shapes
+	-NOT COMPLETED
+-Trig
+	x-Sine: Opposite / Hypotenuse
+	x-Cosine: Adjacent / Hypotenuse
+	x-Tangent: Opposite / Adjacent
+	x-Arc Sine
+	x-Arc Cosine
+	x-Arc Tangent
+	x-Convert angle to radians
+	x-Convert angle to degrees
+-Newton Stuff
+	-Net Force 
+    -Gravitational Force 
+    -Mass of Object 
+	-Distance between objects 
+-Quadratic Formula
+	-Quadrativ Formula
+
+	-History (just text) adapter in popup
+	-History in menu otpion

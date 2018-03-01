@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/num_of_trials"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number of trials"
+            android:inputType="numberDecimal|numberSigned"
+            android:padding="16dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/prob_of_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Probability of success"
+            android:inputType="numberDecimal|numberSigned"
+            android:padding="16dp" />
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>

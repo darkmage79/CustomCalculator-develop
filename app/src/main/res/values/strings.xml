@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">CustomCalculator</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="custom_calculator">Custom Calculator</string>
+    <string name="creator">Created By Logan L.</string>
+
+    <string name="clear">Clear</string>
+    <string name="history">History</string>
+    <string name="ok">Ok</string>
+    <string name="copy">Copy result to clipboard</string>
+    <string name="copied_to_cb">Copied to clipboard</string>
+
+    <string name="arithmetic_options">Arithmetic Options</string>
+
+    <string name="normal_math">Normal Math</string>
+    <string name="general_functions">General Functions</string>
+    <string name="arithmetic">Arithmetic</string>
+
+    <string name="probability">Probability</string>
+    <string name="combination">Combination</string>
+    <string name="permutation">Permutation</string>
+    <string name="binomial_probability">Binomial Probability</string>
+    <string name="geometric_probability">Geometric Probability</string>
+    <string name="std_deviation">Standard deviation of a Sampling Distro.</string>
+    <string name="z_score">Z - Score</string>
+    <string name="confidence_interval">Confidence Interval</string>
+
+    <string name="shapes">Shapes</string>
+
+    <string name="trig">Trigonometry</string>
+    <string name="sine_cosine_tangent">Sine/Cosine/Tangent</string>
+    <string name="sin">Sine</string>
+    <string name="cosine">Cosine</string>
+    <string name="tangent">Tangent</string>
+    <string name="arc_sine_cosine_tangent">Arc Sine/Cosine/Tangent</string>
+    <string name="arc_sine">Arc Sine</string>
+    <string name="arc_cosine">Arc Cosine</string>
+    <string name="arc_tangent">Arc Tangent</string>
+    <string name="degrees_radians">Angle to Degrees/Radians</string>
+    <string name="angle_degrees">Angle to Degrees</string>
+    <string name="angle_radian">Angle to Radians</string>
+
+    <string name="newton_stuff">Newton Stuff</string>
+    <string name="net_force">Net Force</string>
+    <string name="gravitation_force">Gravitational Force</string>
+    <string name="mass_of_object">Mass of Object</string>
+    <string name="distance_between_objects">Distance between objects</string>
+
+    <string name="other_formulas">Other Formulas</string>
+    <string name="quadratic_formula">Quadratic Formula</string>
+
+
+
+</resources>
