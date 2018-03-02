@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">CustomCalculator</string>
+    <string name="app_name">StatisticsCalculator</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="custom_calculator">Custom Calculator</string>
-    <string name="creator">Created By Logan L.</string>
+    <string name="custom_calculator">Statistical Calculator</string>
+    <string name="creator">Created By Logan Lees.</string>
 
     <string name="clear">Clear</string>
     <string name="history">History</string>
