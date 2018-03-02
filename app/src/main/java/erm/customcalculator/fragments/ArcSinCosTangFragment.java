@@ -25,7 +25,7 @@ import android.widget.Spinner;
 import erm.customcalculator.R;
 
 /**
- * Created by ellio on 2/2/2016.
+ * Created by Logan on 2/2/2016.
  */
 public class ArcSinCosTangFragment extends CalcBase {
 
