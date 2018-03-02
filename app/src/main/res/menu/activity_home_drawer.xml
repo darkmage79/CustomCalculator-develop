@@ -10,6 +10,56 @@
                 android:icon="@android:drawable/ic_menu_send"/>
         </menu>
     </item>
+    <item android:title="@string/statistics">
+        <menu>
+            <item
+                android:title="@string/statistics"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/std_deviation"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/population_std_deviation"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/z_score"
+                android:icon="@android:drawable/ic_menu_send" />
+            <item
+                android:title="@string/one_sample_zscore"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/two_sample_zscore"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/two_sample_zinterval"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/t_score"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/one_sample_tscore"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/two_sample_tscore"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/confidence_interval"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/std_error"
+                android:icon="@android:drawable/ic_menu_send"/>
+
+            <item
+                android:title="@string/chisquare"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/spread_of_two_proportions"
+                android:icon="@android:drawable/ic_menu_send"/>
+            <item
+                android:title="@string/tcdf"
+                android:icon="@android:drawable/ic_menu_send"/>
+        </menu>
+    </item>
     <item android:title="@string/probability">
         <menu>
             <item android:title="@string/combination"
@@ -23,24 +73,19 @@
             <item
                 android:title="@string/geometric_probability"
                 android:icon="@android:drawable/ic_menu_send" />
-            <item
-                android:title="@string/std_deviation"
-                android:icon="@android:drawable/ic_menu_send"/>
-            <item
-                android:title="@string/z_score"
-                android:icon="@android:drawable/ic_menu_send" />
-            <item
-                android:title="@string/confidence_interval"
-                android:icon="@android:drawable/ic_menu_send"/>
-
         </menu>
     </item>
     <item android:title="@string/shapes">
         <menu>
             <item
-                android:title="(Coming Soon)"
-                android:icon="@android:drawable/ic_menu_send"/>
-
+                android:title="@string/cylinder"
+                android:icon="@android:drawable/ic_menu_send" />
+            <item
+                android:title="@string/cone"
+                android:icon="@android:drawable/ic_menu_send" />
+            <item
+                android:title="@string/sphere"
+                android:icon="@android:drawable/ic_menu_send" />
         </menu>
     </item>
 

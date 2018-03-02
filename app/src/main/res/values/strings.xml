@@ -10,9 +10,11 @@
 
     <string name="clear">Clear</string>
     <string name="history">History</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="copy">Copy result to clipboard</string>
     <string name="copied_to_cb">Copied to clipboard</string>
+
+
 
     <string name="arithmetic_options">Arithmetic Options</string>
 
@@ -20,18 +22,45 @@
     <string name="general_functions">General Functions</string>
     <string name="arithmetic">Arithmetic</string>
 
+
+
+    <string name="statistics">Statistics</string>
+
+    <string name="std_deviation">Standard deviation of a Sampling Distro.</string>
+    <string name="population_std_deviation">Population Standard Deviation</string>
+    <string name="std_error">Standard Error</string>
+    <string name="z_score">Z - Score</string>
+    <string name="one_sample_zscore">One Sample Z - Score</string>
+    <string name="two_sample_zscore">Two Sample Z - Score</string>
+    <string name="two_sample_zinterval">Two Sample Z - Interval</string>
+    <string name="t_score">T - Score</string>
+    <string name="one_sample_tscore">One Sample T - Score</string>
+    <string name="two_sample_tscore">Two Sample T - Score</string>
+    <string name="confidence_interval">Confidence Interval</string>
+    <string name="chisquare">Chi Squared</string>
+    <string name="spread_of_two_proportions">Spread of Two Proportions</string>
+    <string name="tcdf">TCDF</string>
+
+
+
     <string name="probability">Probability</string>
+
     <string name="combination">Combination</string>
     <string name="permutation">Permutation</string>
     <string name="binomial_probability">Binomial Probability</string>
     <string name="geometric_probability">Geometric Probability</string>
-    <string name="std_deviation">Standard deviation of a Sampling Distro.</string>
-    <string name="z_score">Z - Score</string>
-    <string name="confidence_interval">Confidence Interval</string>
+
+
 
     <string name="shapes">Shapes</string>
+    <string name="cylinder">Cylinder Surface Area/Volume</string>
+    <string name="cone">Cone Surface Area/Volume</string>
+    <string name="sphere">Sphere Surface Area/Volume</string>
+
+
 
     <string name="trig">Trigonometry</string>
+
     <string name="sine_cosine_tangent">Sine/Cosine/Tangent</string>
     <string name="sin">Sine</string>
     <string name="cosine">Cosine</string>
@@ -44,13 +73,19 @@
     <string name="angle_degrees">Angle to Degrees</string>
     <string name="angle_radian">Angle to Radians</string>
 
+
+
     <string name="newton_stuff">Newton Stuff</string>
+
     <string name="net_force">Net Force</string>
     <string name="gravitation_force">Gravitational Force</string>
     <string name="mass_of_object">Mass of Object</string>
     <string name="distance_between_objects">Distance between objects</string>
 
+
+
     <string name="other_formulas">Other Formulas</string>
+
     <string name="quadratic_formula">Quadratic Formula</string>
 
 
