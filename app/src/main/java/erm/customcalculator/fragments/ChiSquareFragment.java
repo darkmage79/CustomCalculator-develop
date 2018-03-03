@@ -67,7 +67,5 @@ public class ChiSquareFragment extends CalcBase {
     public String calculate() throws Exception {
 
         return String.valueOf(observed + "NOT DONE YET"); //TODO
-
-
     }
 }

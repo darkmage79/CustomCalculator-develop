@@ -16,18 +16,35 @@ import erm.customcalculator.fragments.GeoProbFragment;
 import erm.customcalculator.fragments.GravitationalForceFragment;
 import erm.customcalculator.fragments.MassOfObjectFragment;
 import erm.customcalculator.fragments.NetForceFragment;
+import erm.customcalculator.fragments.OneSampleZScoreFragment;
 import erm.customcalculator.fragments.PermutationFragment;
 import erm.customcalculator.fragments.QuadraticFormulaFragment;
 import erm.customcalculator.fragments.SineCosineTangentFragment;
 import erm.customcalculator.fragments.StdDeviationOfSamplingDistributionFragment;
+import erm.customcalculator.fragments.TwoSampleZScoreFragment;
 import erm.customcalculator.fragments.ZScoreFragment;
-
+import erm.customcalculator.fragments.ChiSquareFragment;
+import erm.customcalculator.fragments.ConeFragment;
+import erm.customcalculator.fragments.CylinderFragment;
+import erm.customcalculator.fragments.OneSampleTScoreFragment;
+import erm.customcalculator.fragments.TScoreFragment;
+import erm.customcalculator.fragments.TwoSampleTScoreFragment;
+import erm.customcalculator.fragments.PopulationStandardDeviationFragment;
+import erm.customcalculator.fragments.SphereFragment;
+import erm.customcalculator.fragments.StatisticsFragment;
+import erm.customcalculator.fragments.StdDeviationOfSamplingDistributionFragment;
+import erm.customcalculator.fragments.StdErrorFragment;
+import erm.customcalculator.fragments.TcdfFragment;
+import erm.customcalculator.fragments.TwoSampleZIntervalFragment;
+import erm.customcalculator.fragments.SpreadOfTwoProportionsFragment;
 /**
  * Created by Logan on 1/31/2016.
  */
 public enum Calculations {
     ARITHMETIC,COMBINATION,PERMUTATION,BINOMIAL_PROBABILITY,GEOMETRIC_PROBABILITY, STD_DEV_SPL_DISTRO,Z_SCORE,CONFIDENCE_INT,
-    SINE_COSINE_TANGENT,ARC_SINE_COSINE_TANGENT,DEGREES_RADIANS,NET_FORCE,GRAV_FORCE,MASS,DIST_BET_OBJ,QUAD_FORMULA;
+    SINE_COSINE_TANGENT,ARC_SINE_COSINE_TANGENT,DEGREES_RADIANS,NET_FORCE,GRAV_FORCE,MASS,DIST_BET_OBJ,QUAD_FORMULA,
+    CHI_SQUARE, CONE, SPHERE, CYLINDER, ONESAMPLE_TSCORE, TWOSAMPLE_TSCORE, ONESAMPLE_ZSCORE, TWOSAMPLE_ZSCORE, TWOSAMPLE_ZINTERVAL,
+    POPULATION_STD_DEV, STD_ERROR, TCDF, STATISTICS, T_SCORE, SPREAD_TWO_PROPORTIONS;
 
 
 
@@ -68,6 +85,30 @@ public enum Calculations {
                eCalc = MASS;
            }else if(title.contains(context.getString(R.string.distance_between_objects))){
                eCalc = DIST_BET_OBJ;
+           }else if(title.contains(context.getString(R.string.numbers))){
+               eCalc = STATISTICS;
+           }else if(title.contains(context.getString(R.string.population_std_deviation))){
+               eCalc = POPULATION_STD_DEV;
+           }else if(title.contains(context.getString(R.string.std_error))){
+               eCalc = STD_ERROR;
+           }else if(title.contains(context.getString(R.string.one_sample_zscore))){
+               eCalc = ONESAMPLE_ZSCORE;
+           }else if(title.contains(context.getString(R.string.two_sample_zscore))){
+               eCalc = TWOSAMPLE_ZSCORE;
+           }else if(title.contains(context.getString(R.string.two_sample_zinterval))){
+               eCalc = TWOSAMPLE_ZINTERVAL;
+           }else if(title.contains(context.getString(R.string.t_score))){
+               eCalc = T_SCORE;
+           }else if(title.contains(context.getString(R.string.one_sample_tscore))){
+               eCalc = ONESAMPLE_TSCORE;
+           }else if(title.contains(context.getString(R.string.two_sample_tscore))){
+               eCalc = TWOSAMPLE_TSCORE;
+           }else if(title.contains(context.getString(R.string.chisquare))){
+               eCalc = CHI_SQUARE;
+           }else if(title.contains(context.getString(R.string.spread_of_two_proportions))){
+               eCalc = SPREAD_TWO_PROPORTIONS;
+           }else if(title.contains(context.getString(R.string.tcdf))){
+               eCalc = TCDF;
            }else if(title.contains(context.getString(R.string.quadratic_formula))){
                eCalc = QUAD_FORMULA;
            }
@@ -110,7 +151,32 @@ public enum Calculations {
             frag = new DistanceBetweenObjectsFragment();
         }else if(eCalc == QUAD_FORMULA){
             frag = new QuadraticFormulaFragment();
+        }else if(eCalc ==  TCDF){
+            frag = new TcdfFragment();
+        }else if(eCalc == STATISTICS){
+            frag = new StatisticsFragment();
+        }else if(eCalc == POPULATION_STD_DEV){
+            frag = new PopulationStandardDeviationFragment();
+        }else if(eCalc == STD_ERROR){
+            frag = new StdErrorFragment();
+        }else if(eCalc == ONESAMPLE_ZSCORE){
+            frag = new OneSampleZScoreFragment();
+        }else if(eCalc == TWOSAMPLE_ZSCORE){
+            frag = new TwoSampleZScoreFragment();
+        }else if(eCalc == TWOSAMPLE_ZINTERVAL){
+            frag = new TwoSampleZIntervalFragment();
+        }else if(eCalc == T_SCORE){
+            frag = new TScoreFragment();
+        }else if(eCalc == ONESAMPLE_TSCORE){
+            frag = new OneSampleTScoreFragment();
+        }else if(eCalc == TWOSAMPLE_TSCORE){
+            frag = new TwoSampleTScoreFragment();
+        }else if(eCalc == CHI_SQUARE){
+            frag = new ChiSquareFragment();
+        }else if(eCalc == SPREAD_TWO_PROPORTIONS){
+            frag = new SpreadOfTwoProportionsFragment();
         }
+
         return frag;
     }
 

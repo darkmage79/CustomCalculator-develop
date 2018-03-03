@@ -26,6 +26,7 @@
 
     <string name="statistics">Statistics</string>
 
+    <string name="numbers">List of numbers separated by spaces</string>
     <string name="std_deviation">Standard deviation of a Sampling Distro.</string>
     <string name="population_std_deviation">Population Standard Deviation</string>
     <string name="std_error">Standard Error</string>
