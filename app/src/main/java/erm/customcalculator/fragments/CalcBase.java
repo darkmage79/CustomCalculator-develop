@@ -14,6 +14,7 @@ import erm.customcalculator.classes.ClipboardManager;
 import erm.customcalculator.classes.HistoryManager;
 import erm.customcalculator.classes.Utils;
 import java.util.Arrays;
+import java.lang.Math;
 
 /**
  * Created by Logan on 1/31/2016.
@@ -120,10 +121,10 @@ public abstract class CalcBase extends Fragment {
     }
 
 
-    double dblListValues, mean, median, mode, variance, standard_deviation;
+    double dblListValues, median, middle, mode, variance, standard_deviation;
 
-    public double getMean(String[] listOfNums){
-        double total=0;
+    public double getMean(String[] listOfNums){ //DONE
+        double mean, total=0;
         for(int i=0; i < listOfNums.length; i++){
              dblListValues = Double.parseDouble(listOfNums[i]);
              total += dblListValues;
@@ -132,43 +133,41 @@ public abstract class CalcBase extends Fragment {
         mean = total / listOfNums.length;
         return mean;
     }
-    public double getMedian(String[] listOfNums){ // TODO get this one working
+    public double getMedian(String[] listOfNums){ // TODO get this one working ////////////////////
+        middle = listOfNums.length/2;
         Arrays.sort(listOfNums);
+
         if(listOfNums.length%2 == 0){
-            //median = (double)listOfNums[listOfNums.length/2] + (listOfNums.length/2 - 1)/2;
-        }
-        else
-            median = listOfNums.length/2;
-
-        return dblListValues;
+            median = (Double.parseDouble(listOfNums[(int)middle] + listOfNums[(int)middle + 1])) / 2;
+        }else
+            median = Double.parseDouble(listOfNums[(listOfNums.length-1) / 2] + 1);
+        return median;
     }
-    public double getMode(String[] listOfNums){ // TODO get this one working
+    public double getMode(String[] listOfNums){ // TODO get this one working //////////////////////
+        /*
+        2 variables: mode and modeCount. You should sort the array first,
+        then in the only for loop, check each index against its previous index.
+        If they are equal, add 1 to count, if not, check if the current count is
+        greater than modeCount, if so set modeCount to count and set mode to the
+        current index value. Then set count to 0 :)
+         */
+        return 0;
+    }
+    public double getStandardDeviation(String[] listOfNums){
+        double mean = getMean(listOfNums);
+        for(int i=0; i < listOfNums.length; i++){
+            standard_deviation += Math.pow(i - mean, 2);
+        }
+        return Math.sqrt(standard_deviation/listOfNums.length);
+    }
+    public double getVariance(String[] listOfNums){
+        double mean = getMean(listOfNums);
+        double dblNumOfElements = listOfNums.length;
 
         for(int i=0; i < listOfNums.length; i++){
-            dblListValues = Double.parseDouble(listOfNums[i]);
+            variance += Math.pow(i - mean, 2) / dblNumOfElements;
         }
-        Arrays.sort(listOfNums);
-
-        if(listOfNums.length % 2 == 0){
-            //indexA = (listOfNums.length - 1) / 2;
-            //mode = (listOfNums[dblListValues/2] + (double))
-        }
-        mode = listOfNums.length;
-        return mode;
-    }
-    public double getStandardDeviation(String[] listOfNums){ // TODO get this one working
-
-        for(int i=0; i < listOfNums.length; i++){
-            dblListValues = Double.parseDouble(listOfNums[i]);
-        }
-        return dblListValues;
-    }
-    public double getVariance(String[] listOfNums){ // TODO get this one working
-
-        for(int i=0; i < listOfNums.length; i++){
-            dblListValues = Double.parseDouble(listOfNums[i]);
-        }
-        return dblListValues;
+        return variance;
     }
     public double getSum(String[] listOfNums) {
         double total=0;

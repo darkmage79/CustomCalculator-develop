@@ -62,6 +62,7 @@ public class StatisticsFragment extends CalcBase {
 
             etToString = etNumbers.getText().toString();
             lstNumbers = etToString.split(",");
+
             return "";
         }
     }
@@ -73,8 +74,8 @@ public class StatisticsFragment extends CalcBase {
                 "Mean:                " + getMean(lstNumbers) + "\n" + //DONE
                 "Median:              " + getMedian(lstNumbers) + "\n" +
                 //"Mode:                " + getMode(lstNumbers) + "\n" +
-                //"Standard Deviation:  " + getStandardDeviation(lstNumbers) + "\n" +
-                //"Variance:            " + getVariance(lstNumbers) + "\n" +
+                "Standard Deviation:  " + getStandardDeviation(lstNumbers) + "\n" +
+                "Variance:            " + getVariance(lstNumbers) + "\n" +
                 "Sum of Numbers:      " + getSum(lstNumbers) //DONE
         );
     }
