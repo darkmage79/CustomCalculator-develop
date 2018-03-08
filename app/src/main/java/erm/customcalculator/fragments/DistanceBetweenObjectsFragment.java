@@ -31,9 +31,9 @@ public class DistanceBetweenObjectsFragment extends CalcBase {
     private View GatherViews(LayoutInflater inflater, ViewGroup container) {
         View v = inflater.inflate(R.layout.fragment_distancebetweenobjects, container,
                 false);
-        etMass1 = (EditText) v.findViewById(R.id.value_mass1);
-        etMass2 = (EditText) v.findViewById(R.id.value_mass2);
-        etForce = (EditText) v.findViewById(R.id.value_gravitational_force);
+        etMass1 = v.findViewById(R.id.value_mass1);
+        etMass2 = v.findViewById(R.id.value_mass2);
+        etForce = v.findViewById(R.id.value_gravitational_force);
 
         return v;
     }

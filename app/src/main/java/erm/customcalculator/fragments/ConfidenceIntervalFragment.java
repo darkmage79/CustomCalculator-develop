@@ -29,8 +29,8 @@ public class ConfidenceIntervalFragment extends CalcBase {
     private View GatherViews(LayoutInflater inflater, ViewGroup container) {
         View v = inflater.inflate(R.layout.fragment_confidenceinterval, container,
                 false);
-        etSampleProportion = (EditText)v.findViewById(R.id.value_sampleproportion);
-        etCriticalValue = (EditText)v.findViewById(R.id.value_criticalvalue);
+        etSampleProportion = v.findViewById(R.id.value_sampleproportion);
+        etCriticalValue = v.findViewById(R.id.value_criticalvalue);
         etSampleSize = (EditText)v.findViewById(R.id.value_samplesize);
         return v;
     }

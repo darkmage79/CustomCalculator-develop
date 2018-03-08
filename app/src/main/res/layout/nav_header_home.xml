@@ -16,7 +16,7 @@
         android:layout_width="72dp"
         android:layout_height="72dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/main_image" android:contentDescription="TODO"/>
+        android:src="@drawable/hdpi_icon" android:contentDescription="TODO"/>
 
     <TextView
         android:layout_width="match_parent"

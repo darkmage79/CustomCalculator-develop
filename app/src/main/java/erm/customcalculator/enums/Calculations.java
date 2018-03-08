@@ -32,7 +32,6 @@ import erm.customcalculator.fragments.TwoSampleTScoreFragment;
 import erm.customcalculator.fragments.PopulationStandardDeviationFragment;
 import erm.customcalculator.fragments.SphereFragment;
 import erm.customcalculator.fragments.StatisticsFragment;
-import erm.customcalculator.fragments.StdDeviationOfSamplingDistributionFragment;
 import erm.customcalculator.fragments.StdErrorFragment;
 import erm.customcalculator.fragments.TcdfFragment;
 import erm.customcalculator.fragments.TwoSampleZIntervalFragment;
@@ -85,7 +84,7 @@ public enum Calculations {
                eCalc = MASS;
            }else if(title.contains(context.getString(R.string.distance_between_objects))){
                eCalc = DIST_BET_OBJ;
-           }else if(title.contains(context.getString(R.string.numbers))){
+           }else if(title.contains(context.getString(R.string.statistics))){
                eCalc = STATISTICS;
            }else if(title.contains(context.getString(R.string.population_std_deviation))){
                eCalc = POPULATION_STD_DEV;
@@ -111,6 +110,12 @@ public enum Calculations {
                eCalc = TCDF;
            }else if(title.contains(context.getString(R.string.quadratic_formula))){
                eCalc = QUAD_FORMULA;
+           }else if(title.contains(context.getString(R.string.cone))){
+               eCalc = CONE;
+           }else if(title.contains(context.getString(R.string.cylinder))){
+               eCalc = CYLINDER;
+           }else if(title.contains(context.getString(R.string.sphere))){
+               eCalc = SPHERE;
            }
 
         return eCalc;
@@ -154,7 +159,7 @@ public enum Calculations {
         }else if(eCalc ==  TCDF){
             frag = new TcdfFragment();
         }else if(eCalc == STATISTICS){
-            frag = new StatisticsFragment();
+            frag = new StatisticsFragment(); //Below this needs to be implemented
         }else if(eCalc == POPULATION_STD_DEV){
             frag = new PopulationStandardDeviationFragment();
         }else if(eCalc == STD_ERROR){
@@ -175,6 +180,12 @@ public enum Calculations {
             frag = new ChiSquareFragment();
         }else if(eCalc == SPREAD_TWO_PROPORTIONS){
             frag = new SpreadOfTwoProportionsFragment();
+        }else if(eCalc == CONE){
+            frag = new ConeFragment();
+        }else if(eCalc == SPHERE){
+            frag = new SphereFragment();
+        }else if(eCalc == CYLINDER){
+            frag = new CylinderFragment();
         }
 
         return frag;

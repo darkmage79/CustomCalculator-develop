@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.AppCompatEditText;
 import android.widget.EditText;
 
 import java.math.BigInteger;
@@ -12,6 +13,7 @@ import erm.customcalculator.R;
 import erm.customcalculator.classes.ClipboardManager;
 import erm.customcalculator.classes.HistoryManager;
 import erm.customcalculator.classes.Utils;
+import java.util.Arrays;
 
 /**
  * Created by Logan on 1/31/2016.
@@ -115,5 +117,65 @@ public abstract class CalcBase extends Fragment {
 
     public boolean isEmpty(EditText et){
         return !Utils.isValidString(et.getText().toString());
+    }
+
+
+    double dblListValues, mean, median, mode, variance, standard_deviation;
+
+    public double getMean(String[] listOfNums){
+        double total=0;
+        for(int i=0; i < listOfNums.length; i++){
+             dblListValues = Double.parseDouble(listOfNums[i]);
+             total += dblListValues;
+        }
+
+        mean = total / listOfNums.length;
+        return mean;
+    }
+    public double getMedian(String[] listOfNums){ // TODO get this one working
+        Arrays.sort(listOfNums);
+        if(listOfNums.length%2 == 0){
+            //median = (double)listOfNums[listOfNums.length/2] + (listOfNums.length/2 - 1)/2;
+        }
+        else
+            median = listOfNums.length/2;
+
+        return dblListValues;
+    }
+    public double getMode(String[] listOfNums){ // TODO get this one working
+
+        for(int i=0; i < listOfNums.length; i++){
+            dblListValues = Double.parseDouble(listOfNums[i]);
+        }
+        Arrays.sort(listOfNums);
+
+        if(listOfNums.length % 2 == 0){
+            //indexA = (listOfNums.length - 1) / 2;
+            //mode = (listOfNums[dblListValues/2] + (double))
+        }
+        mode = listOfNums.length;
+        return mode;
+    }
+    public double getStandardDeviation(String[] listOfNums){ // TODO get this one working
+
+        for(int i=0; i < listOfNums.length; i++){
+            dblListValues = Double.parseDouble(listOfNums[i]);
+        }
+        return dblListValues;
+    }
+    public double getVariance(String[] listOfNums){ // TODO get this one working
+
+        for(int i=0; i < listOfNums.length; i++){
+            dblListValues = Double.parseDouble(listOfNums[i]);
+        }
+        return dblListValues;
+    }
+    public double getSum(String[] listOfNums) {
+        double total=0;
+        for (int i = 0; i < listOfNums.length; i++) {
+            dblListValues = Double.parseDouble(listOfNums[i]);
+            total += dblListValues;
+        }
+        return total;
     }
 }
