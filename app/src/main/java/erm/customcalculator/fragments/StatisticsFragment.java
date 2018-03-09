@@ -73,10 +73,11 @@ public class StatisticsFragment extends CalcBase {
         return String.valueOf(
                 "Mean:                " + getMean(lstNumbers) + "\n" + //DONE
                 "Median:              " + getMedian(lstNumbers) + "\n" +
-                //"Mode:                " + getMode(lstNumbers) + "\n" +
+                "Mode:                " + getMode(lstNumbers) + "\n" +
                 "Standard Deviation:  " + getStandardDeviation(lstNumbers) + "\n" +
                 "Variance:            " + getVariance(lstNumbers) + "\n" +
-                "Sum of Numbers:      " + getSum(lstNumbers) //DONE
+                "Sum of Numbers:      " + getSum(lstNumbers) + "\n" +//DONE
+                "Number of inputs:    " + getNumberOfData(lstNumbers)
         );
     }
 }

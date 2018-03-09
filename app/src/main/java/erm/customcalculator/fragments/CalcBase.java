@@ -121,7 +121,7 @@ public abstract class CalcBase extends Fragment {
     }
 
 
-    double dblListValues, median, middle, mode, variance, standard_deviation;
+    double dblListValues;
 
     public double getMean(String[] listOfNums){ //DONE
         double mean, total=0;
@@ -133,17 +133,20 @@ public abstract class CalcBase extends Fragment {
         mean = total / listOfNums.length;
         return mean;
     }
-    public double getMedian(String[] listOfNums){ // TODO get this one working ////////////////////
-        middle = listOfNums.length/2;
+    public double getMedian(String[] listOfNums){ // TODO get this one working ///////////////////
+        double median;
+        double part1 = Double.parseDouble(listOfNums[listOfNums.length/2] + listOfNums[listOfNums.length/2 - 1]);
+
         Arrays.sort(listOfNums);
 
         if(listOfNums.length%2 == 0){
-            median = (Double.parseDouble(listOfNums[(int)middle] + listOfNums[(int)middle + 1])) / 2;
+            median = part1/2;
         }else
-            median = Double.parseDouble(listOfNums[(listOfNums.length-1) / 2] + 1);
+            median = Double.parseDouble(listOfNums[listOfNums.length/2]);
         return median;
     }
     public double getMode(String[] listOfNums){ // TODO get this one working //////////////////////
+        double mode = 0;
         /*
         2 variables: mode and modeCount. You should sort the array first,
         then in the only for loop, check each index against its previous index.
@@ -154,18 +157,20 @@ public abstract class CalcBase extends Fragment {
         return 0;
     }
     public double getStandardDeviation(String[] listOfNums){
+        double standard_deviation = 0;
         double mean = getMean(listOfNums);
         for(int i=0; i < listOfNums.length; i++){
-            standard_deviation += Math.pow(i - mean, 2);
+            standard_deviation += Math.sqrt((Math.pow(i - mean, 2))/(listOfNums.length-1));
         }
-        return Math.sqrt(standard_deviation/listOfNums.length);
+        return standard_deviation;
     }
     public double getVariance(String[] listOfNums){
+        double variance = 0;
         double mean = getMean(listOfNums);
         double dblNumOfElements = listOfNums.length;
 
         for(int i=0; i < listOfNums.length; i++){
-            variance += Math.pow(i - mean, 2) / dblNumOfElements;
+            variance += (Math.pow(i - mean, 2)) / (dblNumOfElements-1);
         }
         return variance;
     }
@@ -177,4 +182,9 @@ public abstract class CalcBase extends Fragment {
         }
         return total;
     }
+
+    public double getNumberOfData(String[] listOfNums){
+        return listOfNums.length;
+    }
+
 }
