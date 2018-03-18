@@ -11,8 +11,8 @@ import android.support.v7.widget.AppCompatEditText;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-//import android.widget.EditText;
+import java.lang.Object;
+import java.util.Formatter;
 
 import erm.customcalculator.R;
 
@@ -61,30 +61,32 @@ public class StatisticsFragment extends CalcBase {
         } else {
 
             etToString = etNumbers.getText().toString();
-            lstNumbers = etToString.split(",");
+            etToString.trim();
+            lstNumbers = etToString.split(" ");
 
             return "";
         }
     }
 
+    Formatter formatter = new Formatter();
     @Override
     public String calculate() throws Exception {
-
+        String strSimpleStats = "Simple Statistics";
+        String strSample = "Sample";
+        String strPopulation = "Population";
         return String.valueOf(
-                "Mean:                " + getMean(lstNumbers) + "\n" + //DONE
-                "Median:              " + getMedian(lstNumbers) + "\n" +
-                "Mode:                " + getMode(lstNumbers) + "\n" +
-                "Standard Deviation:  " + getStandardDeviation(lstNumbers) + "\n" +
-                "Variance:            " + getVariance(lstNumbers) + "\n" +
-                "Sum of Numbers:      " + getSum(lstNumbers) + "\n" +//DONE
-                "Number of inputs:    " + getNumberOfData(lstNumbers)
+                String.format("%50s", strSimpleStats) + "\n" + //This works
+                "Mean:                       " + getMean(lstNumbers) + "\n" + //DONE
+                "Median:                     " + getMedian(lstNumbers) + "\n" + //TODO
+                "Mode:                       " + getMode(lstNumbers) + "\n" + //TODO
+                "Sum of Numbers:             " + getSum(lstNumbers) + "\n" + //DONE
+                "Number of inputs:           " + getNumberOfData(lstNumbers) + "\n" + //DONE
+                String.format("%50s", strSample) + "\n" + //This works
+                "Sample Std Dev:             " + getSampleStdDev(lstNumbers) + "\n" + //TODO
+                "Sample Variance:            " + getSampleVariance(lstNumbers) + "\n" + //TODO sigma squared
+                String.format("%50s", strPopulation) + "\n" + //This works
+                "Population Standard Dev:    " + getPopulationStdDev(lstNumbers) + "\n" + //TODO sigma
+                "Population Variance:        " + getPopulationVariance(lstNumbers) //DONE sigma squared
         );
     }
 }
-
-
-/*
-
-4,3,4
-
- */

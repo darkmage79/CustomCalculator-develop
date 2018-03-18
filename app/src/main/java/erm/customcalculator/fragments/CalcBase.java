@@ -6,6 +6,9 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.AppCompatEditText;
 import android.widget.EditText;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import java.math.BigInteger;
 
@@ -60,10 +63,13 @@ public abstract class CalcBase extends Fragment {
     }
 
     public void displayResult(String nameOfResult, final String result) {
+        LayoutInflater inflater = getActivity().getLayoutInflater();
         //show popup with option to copy to clipboard
         new AlertDialog.Builder(getActivity())
                 .setTitle("Result")
                 .setMessage(result)
+                //Set null as parent view because its going in the dialog layout
+                .setView(inflater.inflate(R.layout.fragment_displayresult, null))
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -156,23 +162,44 @@ public abstract class CalcBase extends Fragment {
          */
         return 0;
     }
-    public double getStandardDeviation(String[] listOfNums){
-        double standard_deviation = 0;
+    public double getSampleStdDev(String[] listOfNums){
+        double sample_stddev = 0;
         double mean = getMean(listOfNums);
         for(int i=0; i < listOfNums.length; i++){
-            standard_deviation += Math.sqrt((Math.pow(i - mean, 2))/(listOfNums.length-1));
+            sample_stddev += Math.sqrt((Math.pow(i - mean, 2))/(listOfNums.length-1));
         }
-        return standard_deviation;
+        return sample_stddev;
     }
-    public double getVariance(String[] listOfNums){
-        double variance = 0;
+    public double getSampleVariance(String[] listOfNums){
+        double sampleVariance = 0;
         double mean = getMean(listOfNums);
-        double dblNumOfElements = listOfNums.length;
 
         for(int i=0; i < listOfNums.length; i++){
-            variance += (Math.pow(i - mean, 2)) / (dblNumOfElements-1);
+            dblListValues = Double.parseDouble(listOfNums[i]);
+            sampleVariance += Math.pow(dblListValues - mean, 2);
+        } //The problem is that it is squaring the mean and not i - mean
+
+        return sampleVariance / (listOfNums.length - 1);
+    }
+    public double getPopulationStdDev(String[] listOfNums){
+        double pop_stddev = 0;
+        double mean = getMean(listOfNums);
+        for(int i=0; i < listOfNums.length; i++){
+            dblListValues = Double.parseDouble(listOfNums[i]);
+            pop_stddev += Math.sqrt((Math.pow(dblListValues - mean, 2))/(listOfNums.length));
         }
-        return variance;
+        return pop_stddev;
+    }
+    public double getPopulationVariance(String[] listOfNums){
+        double variance = 0;
+        double mean = getMean(listOfNums);
+
+        for(int i=0; i < listOfNums.length; i++){
+            dblListValues = Double.parseDouble(listOfNums[i]);
+            variance += Math.pow(dblListValues - mean, 2);
+        } //The problem is that it is squaring the mean and not i - mean
+
+        return variance / (listOfNums.length);
     }
     public double getSum(String[] listOfNums) {
         double total=0;
@@ -187,4 +214,8 @@ public abstract class CalcBase extends Fragment {
         return listOfNums.length;
     }
 
+    public double population_stddev(String[] listofNums){
+
+        return dblListValues;
+    }
 }
